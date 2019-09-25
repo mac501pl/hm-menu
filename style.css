@@ -8,3 +8,17 @@ body {
   height: 100%;
   position: fixed;
 }
+
+.p5Canvas {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.hello {
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
