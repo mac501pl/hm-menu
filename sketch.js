@@ -1,15 +1,15 @@
 const ratio = 10;
 let red, green, blue;
-const speed = 0.1;
+const speed = 0.03;
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
   noStroke();
 }
 
 function draw() {
   frameRate(24);
-  for (let i = 0; i < height; i += ratio) {
+  for (let i = 0; i < windowHeight; i += ratio) {
     red = map(
       i,
       0,
@@ -32,6 +32,6 @@ function draw() {
       map(sin(frameCount * speed), -1, 1, 12, 10)
     );
     fill(red + random(-1, 1), green + random(-1, 1), blue + random(-1, 1));
-    rect(0, i, width, ratio);
+    rect(0, i, windowWidth, ratio);
   }
 }
